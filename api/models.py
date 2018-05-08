@@ -11,4 +11,12 @@ class Note(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 def __str__(self):
-        return '%s %s' % (self.title, self.body)
+    return '%s %s' % (self.title, self.body)
+
+class User(models.Model):
+    name = models.CharField(max_length=200)
+    password = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+def __str__(self):
+    return '%s %s' % (self.name, self.password)
