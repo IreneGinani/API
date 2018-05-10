@@ -18,5 +18,6 @@ class NoteResource(ModelResource):
     class Meta:
         queryset = Note.objects.all()
         resource_name = 'note'
+        authentication = BasicAuthentication()
         authorization = Authorization()
         fields = ['title', 'body']
